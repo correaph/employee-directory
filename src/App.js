@@ -1,23 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({ employeeList }) {
+  const employeeListTable = employeeList.map(employee => (
+    <tr>
+      <td>{employee.firstName}</td>
+      <td>{employee.lastName}</td>
+      <td>{employee.department}</td>
+      <td>{employee.title}</td>
+    </tr>
+  ));
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Employee Directory</h1>
+        <table className="table table-sm table-dark">
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Department</th>
+            <th>Title</th>
+          </tr>
+          {employeeListTable}
+        </table>
+
       </header>
     </div>
   );
