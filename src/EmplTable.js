@@ -17,7 +17,7 @@ export default function EmplTable(props) {
             <label className="radio-inline"><input onChange={props.runOrderBy} type="radio" name="optradio" id="orderByFirstName"></input>First Name </label>
             <label className="radio-inline"><input onChange={props.runOrderBy} type="radio" name="optradio" id="orderByLastName"></input> Last Name </label>
             <form className="form-inline" action="/action_page.php">
-                <label htmlFor="filterByName">Name to be searched (Or part of it):</label>
+                <label htmlFor="filterByName">First and/or last name to be searched (Or part of it):</label>
                 <input
                     type="text"
                     id="filterByName"
