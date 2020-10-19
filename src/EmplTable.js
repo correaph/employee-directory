@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function app(props) {
+export default function EmplTable(props) {
     const employeeListTable = props.employeeList.map(employee => (
         <tr key={employee.id} id={employee.id}>
             <td>{employee.id}</td>
@@ -16,6 +16,18 @@ export default function app(props) {
             <label className="radio-inline"><input onChange={props.runOrderBy} type="radio" name="optradio" id="orderById"></input>Id</label>
             <label className="radio-inline"><input onChange={props.runOrderBy} type="radio" name="optradio" id="orderByFirstName"></input>First Name </label>
             <label className="radio-inline"><input onChange={props.runOrderBy} type="radio" name="optradio" id="orderByLastName"></input> Last Name </label>
+            <form className="form-inline" action="/action_page.php">
+                <label htmlFor="filterByName">Name to be searched (Or part of it):</label>
+                <input
+                    type="text"
+                    id="filterByName"
+                    name="filterByName"
+                    autoComplete="off"
+                    value={props.filterText}
+                    onChange={props.applyFilter}>
+                </input>
+            </form>
+            <hr></hr>
             <table className="table table-sm table-dark">
                 <thead>
                     <tr>

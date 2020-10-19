@@ -15,6 +15,8 @@ if (!localStorage.getItem("employeeList")) {
     { id: "empl-5", firstName: "Donald", lastName: "Duck", department: "IT", title: "Java Developer" },
     { id: "empl-6", firstName: "Mickey", lastName: "Mouse", department: "IT", title: "React Developer" },
     { id: "empl-7", firstName: "Laura", lastName: "Croft", department: "Finance", title: "Director" },
+    { id: "empl-8", firstName: "Bruce", lastName: "Wayne", department: "Finance", title: "Manager" },
+    { id: "empl-9", firstName: "Snow", lastName: "White", department: "IT", title: "Director" },
   ]
 } else {
   employeeList = localStorage.getItem("employeeList");
